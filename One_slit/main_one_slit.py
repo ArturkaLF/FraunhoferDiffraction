@@ -9,7 +9,7 @@ from matplotlib.widgets import Button, Slider
 
 """
 @author Arthur Shajkhatarov
-@version 1.1
+@version 1.2
 
 Physical process modeling. Fraunhofer diffraction
 
@@ -175,7 +175,7 @@ def onButtonAddClicked(event):
     # Saving option with his number
     """Need to change the path to the path in your directory"""
     image.save(str(number) + ".jpg")
-    img = Image.open('/DiffractionGraph/' + str(number) + '.jpg')
+    img = Image.open('/Users/artur/FraunhoferDiffraction/One_slit/' + str(number) + '.jpg')
     img.show()
     number += 1
 
@@ -192,8 +192,9 @@ button_add.on_clicked(onButtonAddClicked)
 # Delete past files
 
 """Need to change the path to the path in your directory"""
-files = glob.glob('/FraunhoferDiffraction/*')
-files.remove('/FraunhoferDiffraction/main.py')
+files = glob.glob('/Users/artur/FraunhoferDiffraction/One_slit/*')
+files.remove('/Users/artur/FraunhoferDiffraction/One_slit/main_one_slit.py')
+
 if files:
     for f in files:
         os.remove(f)
